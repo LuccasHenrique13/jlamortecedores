@@ -1,0 +1,136 @@
+* {
+  color: #fff;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: transparent;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.4s ease;
+}
+
+.header-scrolled {
+  background-color: #151515;
+}
+
+.logoButton {
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.links {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.6s;
+  
+}
+
+.buttonSpeak {
+  background: none;
+  margin-left: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 4px 8px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: transform .4s ease, background-color .4s ease, color .4s ease;
+}
+
+.buttonSpeak:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -70%;
+  width: 50%;
+  height: 100%;
+  background-color: #151515;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease;
+  z-index: 20;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .buttonSpeak {
+   margin: 0 20px 0 20px;
+   
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 20px;
+  }
+  .logoButton {
+    font-size: 15px;
+  }
+  .buttonSpeak {
+    font-size: 13px;
+    padding: 3px 6px;
+    margin-left: 20px;
+  }
+}

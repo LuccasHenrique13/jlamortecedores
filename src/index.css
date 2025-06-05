@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+::selection {
+  background-color: #FAC420;
+  color: #000;
+}
+
+::-moz-selection {
+  background-color: #FAC420;
+  color: #000; 
+}
+
+
+::-webkit-scrollbar {
+  width: 7px; 
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #FAC420;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(153, 118, 14);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #222;
+}
