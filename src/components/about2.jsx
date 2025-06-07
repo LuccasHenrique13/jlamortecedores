@@ -24,7 +24,7 @@ export function About2() {
                             </div>
                         </div>
                         <div className="sr-sequence-item">
-                            <div className="card">
+                            <div className="card" id="pgbtom">
                                 <img src={star} alt="Ícone Qualidade" />
                                 <h3>Qualidade</h3>
                                 <p>✔ Uma qualidade incrível, comparável a peças novas</p>
@@ -38,7 +38,7 @@ export function About2() {
                             </div>
                         </div>
                         <div className="sr-sequence-item">
-                            <div className="card">
+                            <div className="card" id="pgbtom2">
                                 <img src={handshake} alt="Ícone Profissionais" />
                                 <h3>Profissionais experientes</h3>
                                 <p>✔ Com uma ampla experiência no setor automotivo</p>
