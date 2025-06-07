@@ -20,39 +20,22 @@ export function Contacts() {
     }
   };
 
-  // Função formatarTelefone MODIFICADA para o padrão (XX) XXXX-XXXX
   const formatarTelefone = (valorInput) => {
-    // 1. Remove todos os caracteres não numéricos
     let valor = valorInput.replace(/\D/g, '');
 
-    // 2. Adiciona o parêntese de abertura
     if (valor.length > 0) {
-      valor = '(' + valor; // Ex: se valor era "11", agora é "(11"
+      valor = '(' + valor;
     }
 
-    // 3. Adiciona o parêntese de fechamento e o ESPAÇO
-    //    Isso acontece se houver mais de 2 dígitos (o DDD completo)
-    if (valor.length > 3) { // Ex: se valor era "(112", o comprimento é 4 (>3)
-                           // valor.slice(0, 3) é "(11"
-                           // valor.slice(3) é "2..."
-      valor = valor.slice(0, 3) + ') ' + valor.slice(3); // Agora é "(11) 2..."
+    if (valor.length > 3) {
+      valor = valor.slice(0, 3) + ') ' + valor.slice(3);
     }
-    
-    // 4. Adiciona o hífen
-    //    O formato com espaço é (XX) XXXX-XXXX.
-    //    Antes do hífen, temos "(XX) XXXX", que tem 9 caracteres.
-    //    Então, o hífen deve ser inserido se o comprimento de 'valor'
-    //    for maior que 9 (indicando que há dígitos para após o hífen).
-    //    Ex: se valor é "(11) 22334" (comprimento 10), o hífen entra.
-    if (valor.length > 9) { 
-      // valor.slice(0, 9) é "(XX) XXXX"
-      // valor.slice(9) são os dígitos restantes "YYYY"
-      valor = valor.slice(0, 9) + '-' + valor.slice(9); // Agora é "(11) 2233-4..."
+
+    if (valor.length > 9) {
+      valor = valor.slice(0, 9) + '-' + valor.slice(9);
     }
-    
-    // 5. Limita o comprimento total.
-    //    O formato (XX) XXXX-XXXX tem 14 caracteres.
-    valor = valor.slice(0, 14); 
+
+    valor = valor.slice(0, 14);
 
     return valor;
   };
@@ -70,11 +53,6 @@ export function Contacts() {
       return;
     }
 
-    // Remove a máscara para enviar apenas os números do telefone, se necessário
-    // const telefoneApenasNumeros = telefone.replace(/\D/g, '');
-    // const textoWhatsapp = `Olá! Gostaria de fazer um orçamento.\n\nNome: ${nome}\nTelefone: ${telefoneApenasNumeros}\n\nMensagem: ${mensagem}`;
-    
-    // Mantendo o telefone formatado na mensagem do WhatsApp, conforme código original
     const textoWhatsapp = `Olá! Gostaria de fazer um orçamento.\n\nNome: ${nome}\nTelefone: ${telefone}\n\nMensagem: ${mensagem}`;
 
     const textoCodificado = encodeURIComponent(textoWhatsapp);

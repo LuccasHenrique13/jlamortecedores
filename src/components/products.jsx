@@ -60,26 +60,25 @@ export function Products() {
                 <div className="productsCard sr-sequence-item">
                     <div className="imageWrapper">
                         <img src={coximdemotorcaminhao} alt="Coxim de Motor de Caminhão" />
-                        <h2 className="imageTitle"id='top'>Coxim de Motor <br /> de Caminhão</h2>
+                        <h2 className="imageTitle" id='top'>Coxim de Motor <br /> de Caminhão</h2>
                         <a className="buttonAboutProducts" href={getLink("Coxim de Motor de Caminhão")} target="_blank" rel="noopener noreferrer">Saiba mais</a>
                     </div>
                 </div>
                 <div className="productsCard sr-sequence-item">
                     <div className="imageWrapper">
                         <img src={coximdecambiocaminhao} alt="Coxim de Câmbio de Caminhão" />
-                        <h2 className="imageTitle"id='top'>Coxim de Câmbio <br /> de Caminhão</h2>
+                        <h2 className="imageTitle" id='top'>Coxim de Câmbio <br /> de Caminhão</h2>
                         <a className="buttonAboutProducts" href={getLink("Coxim de Câmbio de Caminhão")} target="_blank" rel="noopener noreferrer">Saiba mais</a>
                     </div>
                 </div>
                 <div className="productsCard sr-sequence-item">
                     <div className="imageWrapper">
                         <img src={quintaRoda} alt="Coxim quinta roda de caminhão" />
-                        <h2 className="imageTitle"id='top'>Coxim Quinta<br /> Roda de Caminhão</h2>
+                        <h2 className="imageTitle" id='top'>Coxim Quinta<br /> Roda de Caminhão</h2>
                         <a className="buttonAboutProducts" href={getLink("Coxim Quinta Roda Caminhão")} target="_blank" rel="noopener noreferrer">Saiba mais</a>
                     </div>
                 </div>
 
-                {/* Última imagem centralizada */}
                 <div className="productsCard sr-sequence-item last-product">
                     <div className="imageWrapper">
                         <img src={coximdebarco} alt="Coxim de Barco" />
