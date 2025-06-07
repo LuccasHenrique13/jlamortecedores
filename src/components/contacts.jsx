@@ -35,7 +35,7 @@ export function Contacts() {
       valor = valor.slice(0, 9) + '-' + valor.slice(9);
     }
 
-    valor = valor.slice(0, 14);
+    valor = valor.slice(0, 15);
 
     return valor;
   };
